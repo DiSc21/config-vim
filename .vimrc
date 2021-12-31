@@ -44,7 +44,20 @@
 
 
 " ================== pathogen ====================
-#execute pathogen#infect()
+"execute pathogen#infect()
+
+call plug#begin('~/.vim/plugged')
+  Plug 'vim-scripts/vim-plug'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'rafi/awesome-vim-colorschemes'
+  Plug 'majutsushi/tagbar'
+  Plug 'scrooloose/nerdtree'
+  Plug 'scrooloose/syntastic'
+  Plug 'szw/vim-ctrlspace'
+  Plug 'tpope/vim-fugitive'
+  Plug 'valloric/youcompleteme'
+call plug#end()
 
 " ================== sources =====================
 source ~/.vim/custom/custom_settings.vim
