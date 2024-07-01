@@ -30,25 +30,20 @@ tnoremap   <silent>   <F8>    <C-\><C-n>:FloatermPrev<CR>
 nnoremap   <silent>   <F12>   :FloatermToggle<CR>
 tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
 
-" ===================================================================
-" float term mappings
-" ===================================================================
-" ctrlP mappings
-"let g:ctrlp_map = '<c-p>'
 
 " ==================================================================="
-" ag-vim mappings                                                  "
-"nnoremap <Leader>ag :Ag <cword>
-
+" fuzzy search-vim mappings                                                  "
+nnoremap <Leader>ag :Ag <CR>
+nnoremap <C-p> :Files <CR>
 
 
 " ==================================================================="
 " fugitive mappings                                                  "
 nnoremap <Leader>gs :Git<CR>
-nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gd :Git diff<CR>
+nnoremap <Leader>gb :Git blame<CR>
 nnoremap <Leader>gc :Git commit<CR>
-nnoremap <Leader>gw :Gwrite<CR>
+nnoremap <Leader>gw :Git write<CR>
 nnoremap <Leader>gp :Git push<CR>
 
 " ==================================================================="

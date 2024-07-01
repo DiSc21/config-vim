@@ -13,7 +13,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'szw/vim-ctrlspace'
   Plug 'tpope/vim-fugitive'
   Plug 'bronson/vim-trailing-whitespace'
-  Plug 'valloric/youcompleteme'
+  "Plug 'valloric/youcompleteme'
+  Plug 'easymotion/vim-easymotion'
   Plug 'honza/vim-snippets'
   Plug 'sirver/ultisnips'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
