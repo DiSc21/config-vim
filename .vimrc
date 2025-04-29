@@ -12,7 +12,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/syntastic'
   Plug 'szw/vim-ctrlspace'
   Plug 'tpope/vim-fugitive'
+  Plug 'christoomey/vim-tmux-navigator'
   Plug 'bronson/vim-trailing-whitespace'
+  Plug 'z0mbix/vim-shfmt'
   "Plug 'valloric/youcompleteme'
   Plug 'easymotion/vim-easymotion'
   Plug 'honza/vim-snippets'
@@ -40,4 +42,5 @@ autocmd VimEnter * wincmd l
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 
-
+" ====== shfmt weirdly uses tabs as default ======
+let g:shfmt_extra_args='-i 2'

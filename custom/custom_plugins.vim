@@ -79,7 +79,7 @@ let g:Tex_BibtexFlavor = 'bibtex'
 
 " ====================================================================
 " addition syntasic paths
-"let g:syntastic_java_javac_classpath =
+let g:syntastic_sh_shellcheck_args = "-x"
 
 
 
