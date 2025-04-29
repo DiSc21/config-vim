@@ -11,6 +11,9 @@ let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_theme='wombat'
 
 " ====================================================================
+" vim-floatterm settings                                             "
+
+" ====================================================================
 " vim-ctrlspace settings                                             "
 set showtabline=1
 let g:CtrlSpaceUseTabline=1
@@ -67,16 +70,16 @@ let g:Tex_BibtexFlavor = 'bibtex'
 
 " ====================================================================
 " mkdx (markdown plugin) settings                                                   "
-let g:mkdx#settings  = { 'highlight': { 'enable': 1 },
-                     \ 'enter': { 'shift': 1 },
-                     \ 'links': { 'external': { 'enable': 1 } },
-                     \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
-                     \ 'fold': { 'enable': 1 } }
+"let g:mkdx#settings  = { 'highlight': { 'enable': 1 },
+"                     \ 'enter': { 'shift': 1 },
+"                     \ 'links': { 'external': { 'enable': 1 } },
+"                     \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
+"                     \ 'fold': { 'enable': 1 } }
 
 
 " ====================================================================
 " addition syntasic paths
-"let g:syntastic_java_javac_classpath =
+let g:syntastic_sh_shellcheck_args = "-x"
 
 
 

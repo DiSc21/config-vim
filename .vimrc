@@ -1,48 +1,3 @@
-" .==================================================.
-" | installed plugins (ordered by installation date) |
-" | ================================================ |
-" |                                                  |
-" | - syntastic                                      |
-" |                                                  |
-" | - vim-airline                                    |
-" |                                                  |
-" | - vim-airline-themes: e.g.                       |
-" |   dark themes: angr, ayu-mirage, dark, deus,     |
-" |   molokai,powerlinish,raven,understated,wombat,  |
-" |                                                  |
-" | - vim-ctrlspace                                  |
-" |                                                  |
-" | - vim-colorshemes: e.g.                          |
-" |   dark themes: angr, ayu, molokai, deus,         |
-" |                                                  |
-" | - vim-tmux-navigator                             |
-" |                                                  |
-" | - indentline                                     |
-" |                                                  |
-" | - snipmate                                       |
-" |                                                  |
-" | - NerdTree                                       |
-" |                                                  |
-" | - Tagbar                                         |
-" |                                                  |
-" | - tlib-vim                                       |
-" |                                                  |
-" | - vim-misc                                       |
-" |                                                  |
-" | - YouCompleteMe                                  |
-" |                                                  |
-" | - fugitive                                       |
-" |                                                  |
-" | - vim-wiki                                       |
-" |                                                  |
-" | - easy motion                                    |
-" |                                                  |
-" | - TabCompletion:                                 |
-" |   ??? YouCompleteMe/OmniTab/... ???              |
-" |                                                  |
-" '=================================================='
-
-
 " ================== pathogen ====================
 "execute pathogen#infect()
 
@@ -53,10 +8,22 @@ call plug#begin('~/.vim/plugged')
   Plug 'rafi/awesome-vim-colorschemes'
   Plug 'majutsushi/tagbar'
   Plug 'scrooloose/nerdtree'
+  Plug 'rhysd/vim-clang-format'
   Plug 'scrooloose/syntastic'
   Plug 'szw/vim-ctrlspace'
   Plug 'tpope/vim-fugitive'
-  Plug 'valloric/youcompleteme'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'bronson/vim-trailing-whitespace'
+  Plug 'z0mbix/vim-shfmt'
+  "Plug 'valloric/youcompleteme'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'honza/vim-snippets'
+  Plug 'sirver/ultisnips'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'voldikss/vim-floaterm'
+  "Plug 'kien/ctrlp.vim'
+  "Plug 'rking/ag.vim'
 call plug#end()
 
 " ================== sources =====================
@@ -71,3 +38,9 @@ source ~/.vim/custom/custom_keybinds4plugins.vim
 autocmd VimEnter * TT
 autocmd VimEnter * wincmd l
 
+" ============== whistespaces plugin =============
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+
+" ====== shfmt weirdly uses tabs as default ======
+let g:shfmt_extra_args='-i 2'

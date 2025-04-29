@@ -2,13 +2,48 @@
 " = PLUGIN KEYBINDINGS ========================================================"
 " ============================================================================="
 
+" ===================================================================
+" whitespace
+nnoremap <Leader>ff :FixWhitespace
+
+" ===================================================================
+" ulti snip mappings
+let g:UltiSnipsExpandTrigger="<c-g>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" ===================================================================
+" float term mappings
+" ===================================================================
+nnoremap <Leader>fb :FloatermNew --silent --name=build_term --autoclose=0 make test<CR>
+nnoremap <Leader>ft :FloatermToggle <CR>
+nnoremap <C-t> :FloatermToggle <CR>
+
+nnoremap   <silent>   <F5>    :FloatermKill<CR>
+tnoremap   <silent>   <F5>    <C-\><C-n>:FloatermKill<CR>
+nnoremap   <silent>   <F6>    :FloatermNext<CR>
+tnoremap   <silent>   <F6>    <C-\><C-n>:FloatermNext<CR>
+nnoremap   <silent>   <F7>    :FloatermNew<CR>
+tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermNew<CR>
+nnoremap   <silent>   <F8>    :FloatermPrev<CR>
+tnoremap   <silent>   <F8>    <C-\><C-n>:FloatermPrev<CR>
+nnoremap   <silent>   <F12>   :FloatermToggle<CR>
+tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
+
+
+" ==================================================================="
+" fuzzy search-vim mappings                                                  "
+nnoremap <Leader>ag :Ag <CR>
+nnoremap <C-p> :Files <CR>
+
+
 " ==================================================================="
 " fugitive mappings                                                  "
-nnoremap <Leader>gs :Gstatus<CR>
-nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gs :Git<CR>
+nnoremap <Leader>gd :Git diff<CR>
+nnoremap <Leader>gb :Git blame<CR>
 nnoremap <Leader>gc :Git commit<CR>
-nnoremap <Leader>gw :Gwrite<CR>
+nnoremap <Leader>gw :Git write<CR>
 nnoremap <Leader>gp :Git push<CR>
 
 " ==================================================================="
